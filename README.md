@@ -1,1 +1,3 @@
-# Academic_Side_Quest
+# Academic Side Quest
+
+Os estudantes de universidades ou escolas de nível técnico têm uma quantidade de horas complementares a serem cumpridas, obrigatoriamente para a conclusão do curso. Entretanto, a grande maioria desses alunos apresentam grandes dificuldades na hora de gerenciar essas horas obrigatórias, sem saber quantos pontos atingiram em cada grupo no decorrer do semestre de modo a ter um melhor aproveitamento dessas horas. Pensando nisso, esse projeto busca criar uma aplicação que apresente essas informações de maneira simples e “gameficada” para auxiliar os estudantes a gerenciar suas horas complementares.
