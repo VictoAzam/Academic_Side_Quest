@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/login.css">
     <title>LoginASQ!</title>
 </head>
 <body>
     <div class="conteiner">
-        <label for="Login_Aluno">
+        <label for="Login_Aluno" id="loginaluno">
             <h1>Login do Aluno</h1>
             <form action="/login_aluno" method="post">
                 <input type="email" name="email" id="email" placeholder="Digite seu email exemplo@email.com" required>
                 <input type="password" name="senha" id="senha" placeholder="Senha" required>
-                <button type="submit">Voltar </button>
-                <button type="submit">Entrar</button>
+        
+              
                 <p>Caso não tenha um acesso, <a href="#">clique aqui para criar.</a></p>
+                <div class="acessar">
+                    <button type="submit">Voltar </button>
+                    <button type="submit">Entrar</butto>
+                </div>
             </form>
         </label>
+    
     </div>
+<img src="/images/moldura.png" alt="" id="moldura-1">
 </body>
 </html>
