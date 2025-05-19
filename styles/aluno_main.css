@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaro', sans-serif;
+}
+
+.container {
+    background-color: #FFF5EB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: #F29334;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 2px 2px darkgray;
+    padding: 5px;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .prof-pic {
+    width: 50px;
+    margin-left: 5px;
+}
+
+header .prof-pic a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .user-info {
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.logo .logo-img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .welcome-title{
+    margin-top: 100px;
+    font-size: 30px;
+    color: #172B68;
+}
+
+main .card {
+    background-color: #FFB44E;
+    height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 2px darkgray;
+    border-radius: 10px;
+    gap: 25px;
+}
+
+main .card .bt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #172B68;
+    gap: 2px;
+}
+
+main .card a {
+    background-color: #172B68;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+main .blocks {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
