@@ -12,22 +12,74 @@ body {
     align-items: center;
     height: 100vh;
 }
-#moldura-1{
+
+h1{
+    color:#172B68 ;
+    font-size: 40px;
+    
+}
+
+p{
+    color: #172B68;
+    font-size: 14px;
+    margin-top: 10px;
+}
+a{
+    color: #3853A4;
+    text-decoration: none;
+}
+#moldura-1 {
     position: fixed;
-    top: 0px ;
+    top: 0;
     left: 0;
-    width: 25vh; /* ajuste o tamanho conforme necessário */
+    width: 20%; /* Ajusta proporcionalmente à largura da tela */
+    max-width: 300px; /* Limita o tamanho máximo */
+    min-width: 150px; /* Limita o tamanho mínimo */
     height: auto;
-    z-index: 1000; /
+    z-index: 1000;
+}
+
+#moldura-2 {
+    position: fixed;
+    bottom: 0; /* Posiciona no canto inferior */
+    right: 0; /* Posiciona no canto direito */
+    width: 20%; /* Ajusta proporcionalmente à largura da tela */
+    max-width: 300px; /* Limita o tamanho máximo */
+    min-width: 150px; 
+    height: auto;
+    z-index: 1000;
+    transform: rotate(-180deg);
 }
 
 #loginaluno{
-    position: fixed;
-    background-color:#FFB44E ;
-    height:
-    width: 707px; /* ajuste o tamanho conforme necessário */
-    
-    
-    
-
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color:#FFB44E ;
+width: 580px;
+height: 481px;
+justify-items: center;
+padding-top: 80px ;
+justify-content: ;
+border-radius: 15px;
+box-shadow: 0px 0px 10px rgba(0, 4, 4, 0.1);
 }
+
+input [type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border:  none;
+    
+    border-radius: 4px;
+    background-color: #d5810bd8;
+}
+
+button:focus,
+button:active {
+  outline: none;
+  box-shadow: none;
+  background: none; /* se necessário */
+}
+
