@@ -10,20 +10,27 @@
     <div class="conteiner">
         <label for="Login_Aluno" id="loginaluno">
             <h1>Login do Aluno</h1>
+
             <form action="/login_aluno" method="post">
-                <input type="email" name="email" id="email" placeholder="Digite seu email exemplo@email.com" required>
-                <input type="password" name="senha" id="senha" placeholder="Senha" required>
-        
-              
-                <p>Caso não tenha um acesso, <a href="#">clique aqui para criar.</a></p>
-                <div class="acessar">
-                    <button type="submit">Voltar </button>
-                    <button type="submit">Entrar</butto>
+                <div class="acess">
+                    <label for=""><span>*</span> Seu e-mail:</label>
+                    <input type="email" name="email" id="email" required autocomplete="off">
+
+                    <label for=""><span>*</span> Sua senha:</label>
+                    <input type="password" name="senha" id="senha" required autocomplete="off">
                 </div>
+
+                <div class="acessar">
+                    <button type="submit">Voltar<img src="/images/arrow-left.png" alt="" id="icon"></button>
+                    <button type="submit">Entrar<img src="/images/check.png" alt="" id="icon"></butto>
+                </div>
+
+                <p>Caso não tenha um acesso, <a href="#">clique aqui </a>para criar.</p>
             </form>
         </label>
-    
     </div>
-<img src="/images/moldura.png" alt="" id="moldura-1">
+
+    <img src="/images/moldura.png" alt="" id="moldura-1">
+    <img src="/images/moldura.png" alt="" id="moldura-2">
 </body>
 </html>
