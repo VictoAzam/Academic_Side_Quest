@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='enviar_horas.css') }}">
+    <title>Envio de horas</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="user-info">
+                <a href="#"><img class="prof-pic" src="{{ url_for('static', filename='images/profile_pic.png') }}" alt="user"></a>
+                <div class="user-text">
+                    <p>User name</p>
+                    <p>University name</p>
+                </div>
+            </div>
+
+            <div class="logo">
+                <img class="logo-img" src="{{ url_for('static', filename='images/logoz.svg') }}" alt="Logo">
+            </div>
+        </header>
+
+        <main>
+            <div class="main-card">
+                <div class="main-title">
+                    <h1>Envio de horas</h1>
+                </div>
+                
+                <div class="main-content">
+                    {% for categoria in categorias %}
+                        <div class="categoria-card">
+                            <div class="categoria-title">
+                                <h2 class="title">{{ categoria.nome }}</h2>
+                                <h2 class="hora"> {{ categoria.maxima_semestre }}h </h2>
+                            </div>
+                            {% for subcategoria in categoria.subcategorias %}
+                                <div class="subcategoria-title">
+                                    <h2>{{ subcategoria.nome }}</h2>
+                                    <h2>{{ subcategoria.maxima_sub }}h</h2>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </main>
+    </div>
+</body>
+</html>

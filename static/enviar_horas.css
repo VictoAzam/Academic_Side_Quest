@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaro', sans-serif;
+}
+
+.container {
+    background-color: #FFF5EB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+header {
+    background-color: #F29334;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 2px 2px darkgray;
+    padding: 5px;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .prof-pic {
+    width: 50px;
+    margin-left: 5px;
+}
+
+header .prof-pic a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .user-info {
+     display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.logo .logo-img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.main-card {
+    background-color: white;
+    width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px darkgray;
+    margin-top: 120px;
+    overflow: hidden;
+}
+
+.main-title {
+    color: #172B68;
+    background-color: #FFB44E;
+    overflow: hidden;
+    padding-left: 15px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+}
+
+.categoria-card {
+    background-color: #FFF5EB;
+    border: 1px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.categoria-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #FFB44E;
+    color: #B3B5C5;
+    padding: 10px;
+}
+
+.title {
+    color: #172B68;
+}
+
+.hora {
+    color: #DC8917;
+}
+
+.subcategoria-title {
+    background-color: #FFF5EB;
+    color: #172B68;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
