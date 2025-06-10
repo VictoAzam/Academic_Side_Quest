@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/styles/cadastro.css" />
+    <title>CadastroASQ!</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-cadastro">
+          <h1>Cadastro do Servidor</h1>
+          <form action="/Cadastro_servidor" method="post">
+              <label for="nomeserv">Nome Completo:</label>
+                <input
+                type="text"
+                name="nome"
+                id="nomeserv"
+                placeholder="Digite seu nome completo"
+                required />
+                
+                <label for="codserv">Seu código de servidor:</label>
+                <input
+                type="text"
+                name="cod_servidor"
+                id="codserv"
+                placeholder="Digite seu codigo de servidor"
+                required />
+
+                <label for="email">Seu e-mail:</label>
+                <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Digite seu email exemplo@email.com"
+                required />
+
+                <label for="senha">Sua senha:</label>
+                <input
+                type="password"
+                name="senha"
+                id="senha"
+                placeholder="Senha"
+                required />
+
+                <p>
+                Caso não tenha um acesso, <a href="#">clique aqui para criar.</a>
+                </p>
+                <div class="acessar">
+                <!-- <button type="button" onclick="window.history.back()">Voltar</button> -->
+                <button type="button">Voltar</button>
+                <button type="submit">Cadastrar</button>
+                </div>
+            </form>
+            </label>
+      </div>
+    </div>
+    <img src="/images/moldura.png" alt="" id="moldura-1" />
+  </body>
+</html>
