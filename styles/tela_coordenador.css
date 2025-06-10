@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Jaro', sans-serif;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    background-color: #F29334;
+    height: 80px;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.perfil {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.perfil img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+.logo {
+    margin-right: 20px;
+    margin-top: 10px;
+    width: 200px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80%;
+    height: 80%;
+}
+
+main {
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+    gap: 10px;
+    color: #172B68;
+}
+
+section {
+    height: 220px;
+    width: 600px;
+    background: #FFB44E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section i {
+    font-size: 120px;
+    color: #ffffff;
+    background: #172B68;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.gen {
+    width: 180px;
+    height: 210px;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+}
