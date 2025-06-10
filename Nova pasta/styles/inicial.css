@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jaro", sans-serif;
+}
+
+body {
+  background-color: #f1ede9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.pocao {
+  width: 220px;
+  margin-bottom: -10px;
+}
+
+.titulo img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+}
+
+.startButton {
+  margin-top: 10px;
+  /* ANIMAÇÃO DE SAÍDA PARA O BOTÃO START */
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.startButton.fade-out {
+  opacity: 0;
+  transform: scale(0.8);
+  pointer-events: none; /* Impede cliques durante a animação de saída */
+}
+
+/* --- ONDE A MÁGICA DA ANIMAÇÃO ACONTECE --- */
+
+.botoesUsuarios {
+  display: flex; /* Agora é flex por padrão */
+  gap: 30px;
+  
+  /* 1. ESTADO INICIAL (ESCONDIDO) */
+  opacity: 0;
+  transform: translateY(20px); /* Começa um pouco para baixo */
+  pointer-events: none; /* Impede interação quando invisível */
+
+  /* 2. TRANSIÇÃO SUAVE */
+  /* Anima todas as propriedades que mudarem durante 0.5s */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  transition-delay: 0.3s; /* Espera 0.3s antes de começar (depois que o Start some) */
+}
+
+/* 3. ESTADO FINAL (QUANDO A CLASSE '.visivel' É ADICIONADA) */
+.botoesUsuarios.visivel {
+  opacity: 1;
+  transform: translateY(0); /* Volta à posição original */
+  pointer-events: auto; /* Permite interação novamente */
+}
+/* --- FIM DA ANIMAÇÃO --- */
+
+
+.btn img {
+  width: 120px;
+  transition: transform 0.3s;
+}
+
+#start {
+  width: 250px;
+  height: 50px;
+}
+
+#coodenador {
+  width: 223px;
+  height: 40px;
+}
+
+#aluno {
+  width: 223px;
+  height: 40px;
+}
+
+img:hover {
+  transform: scale(1.1);
+}
