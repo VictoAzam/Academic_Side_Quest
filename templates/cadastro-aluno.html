@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/cadastro.css">
+</head>
+<body>
+    
+    <body>
+        <div class="conteiner">
+          <div id="loginaluno">
+            <h1>Login do Aluno</h1>
+            <form action="/cadastro_aluno" method="post">
+              <p>* Nome Completo:</p>
+              <input type="text" name="nome" id="nome-completo" placeholder="Digite seu nome completo" required />
+      
+              <p>* Seu e-mail:</p>
+              <input type="email" name="email" id="email" placeholder="email@email.com" required />
+      
+              <p>* Sua Senha:</p>
+              <input type="password" name="senha" id="senha1" placeholder="Digite uma senha" required />
+      
+              <p>* Confirme sua Senha:</p>
+              <input type="password" name="confirmar_senha" id="senha2" placeholder="Confirme sua senha" required />
+      
+              <div class="botoes">
+                <a href="#" id="btn-voltar">
+                  <img src="/images/Botão voltar.svg" alt="Voltar" />
+                </a>
+                <a href="#" id="btn-entrar">
+                  <img src="/images/Botão entrar.svg" alt="Entrar" />
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+      
+        <div class="molduras">
+          <img src="/images/Frame 85.svg" alt="Moldura superior esquerda" id="moldura-1" />
+          <img src="/images/Frame 85.svg" alt="Moldura inferior direita" id="moldura-2" />
+        </div>
+      </body>
+</html>

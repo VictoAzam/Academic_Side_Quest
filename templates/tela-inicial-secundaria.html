@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Academic Side Quest!</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/styles/inicial.css" />
+  <script defer src="/script/script/inicial.js"></script>
+  <title>Academic Side Quest!</title>
 </head>
 <body>
-    <div class="conteiner">
-        <div class="pocao">
-            <img src="/images/pocao.png" alt="">
-        </div>
-        <div class="start">
-            <a href="#"> <img src="/images/Group 30.svg" alt=""> </a>
-        </div>
-        <div class="secundario">
-
-            <a href="#"> <img src="/images/Group 32.svg" alt=""></a>
-            <a href="#"><img src="/images/Botão voltar (1).svg" alt=""></a>
-        </div>
+    <div class="container">
+      
+    
+      <div class="imagem-central">
+        <img src="/images/pocao.png" alt="Poção" class="pocao-img">
+        <img src="/images/letras.svg" alt="letras" class="letras-img">
     </div>
-</body>
+  
+      <div class="startButton" id="startButton">
+        <a href="#" id="start">
+          <img src="/images/Group 30.svg" alt="Start">
+        </a>
+      </div>
+  
+      <div class="botoesUsuarios" id="botoesUsuario">
+        <a href="/templates/login_aluno.html" class="btn">
+          <img id="aluno" src="/images/Group 32.svg" alt="Aluno">
+        </a>
+        <a href="/templates/login_do_servidor.html" class="btn">
+          <img id="coordenador" src="/images/Botão voltar (1).svg" alt="Coordenador">
+        </a>
+      </div>
+  
+    </div>
+  </body>
 </html>
