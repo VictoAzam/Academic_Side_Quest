@@ -16,10 +16,12 @@ class Subcategoria(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     nome = db.Column(db.String(50), nullable=False)
     maxima_sub=db.Column(db.Integer, nullable=False)
+    descricao = db.Column(db.String(500), nullable=True)
     categoria_id = db.Column(db.Integer, db.ForeignKey('categoria.id'), nullable=False)
 
-with app.app_context():
-    db.create_all()
+# with app.app_context():
+#     db.drop_all()
+#     db.create_all()
 
 insert_categorias = [
     Categoria(nome='Aperfeiçoamento e Enriquencimento Cultural e Esportivo', maxima_semestre=80),
@@ -27,8 +29,8 @@ insert_categorias = [
 ]
 
 insert_subcategorias = [
-    Subcategoria(nome='Participação como agente em atividades culturais', categoria_id=1, maxima_sub=30),
-    Subcategoria(nome='Visitas técnicas e culturais', categoria_id=1, maxima_sub=30),
+    Subcategoria(nome='Participação como agente em atividades culturais', categoria_id=1, maxima_sub=30, descricao="filme, teatro, apresentações artísticas, feiras, exposições, festivais e competições esportivas, bandas, coral, olimpíadas em geral."),
+    Subcategoria(nome='Visitas técnicas e culturais', categoria_id=1, maxima_sub=30, descricao="Patrimônios tombados, cidades históricas, monumentos, museus, memoriais, escola-modelo, creches, berçários, ONGs, APAE e entidades afins, hospitais laboratórios, instituições de ensino e pesquisa, empresas públicas e privadas e outras de interesse do curso."),
     Subcategoria(nome='Monitoria remunerada ou voluntária', categoria_id=2, maxima_sub=60),
     Subcategoria(nome='Membro atuante em atividades Técnico-científicas', categoria_id=2, maxima_sub=30)
 ]

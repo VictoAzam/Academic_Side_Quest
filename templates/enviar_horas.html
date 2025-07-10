@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='enviar_horas.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
     <title>Envio de horas</title>
 </head>
 <body>
@@ -31,16 +32,39 @@
                 <div class="main-content">
                     {% for categoria in categorias %}
                         <div class="categoria-card">
-                            <div class="categoria-title">
+                            <div class="categoria-title" onclick="toggleSubcategorias(this)">
                                 <h2 class="title">{{ categoria.nome }}</h2>
-                                <h2 class="hora"> {{ categoria.maxima_semestre }}h </h2>
+                                <h2 class="hora">Máxima na categoria por semestre: {{ categoria.maxima_semestre }}h </h2>
                             </div>
-                            {% for subcategoria in categoria.subcategorias %}
-                                <div class="subcategoria-title">
-                                    <h2>{{ subcategoria.nome }}</h2>
-                                    <h2>{{ subcategoria.maxima_sub }}h</h2>
-                                </div>
-                            {% endfor %}
+                            <div class="subcategorias-list">
+                                {% for subcategoria in categoria.subcategorias %}
+                                    <div class="subcategoria-title" onclick="toggleSubcategoriaContent(this)">
+                                        <h2>{{ subcategoria.nome }}</h2>
+                                        <h2>Horas máximas nessa subcategoria: {{ subcategoria.maxima_sub }}h</h2>
+                                    </div>
+                                    <div class="subcategoria-content">
+                                        <p>{{ subcategoria.descricao }}</p>
+                                        <form method="post" enctype="multipart/form-data">
+                                            <label>
+                                                Número de horas:
+                                                <input type="number" name="horas" min="0" required>
+                                            </label>
+                                            <br>
+                                            <label>
+                                                Descrição/Observação:
+                                                <input type="text" name="observacao" required>
+                                            </label>
+                                            <br>
+                                            <label>
+                                                Comprovante:
+                                                <input type="file" name="comprovante" required>
+                                            </label>
+                                            <br>
+                                            <button type="submit">Enviar</button>
+                                        </form>
+                                    </div>
+                                {% endfor %}
+                            </div>
                         </div>
                     {% endfor %}
                 </div>

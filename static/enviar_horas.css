@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Jaro', sans-serif;
+    font-family: 'Tomorrow', sans-serif;
 }
 
 .container {
@@ -80,12 +80,12 @@ header .user-info {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    gap: 5px;
+    gap: 10px;
 }
 
 .categoria-card {
     background-color: #FFF5EB;
-    border: 1px solid black;
+    box-shadow: 0px 2px 2px darkgray;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -97,6 +97,7 @@ header .user-info {
     background-color: #FFB44E;
     color: #B3B5C5;
     padding: 10px;
+    cursor: pointer;
 }
 
 .title {
@@ -107,9 +108,36 @@ header .user-info {
     color: #DC8917;
 }
 
+.subcategorias-list {
+    max-height: 0;
+    overflow: hidden;
+    display: block;
+}
+
+.subcategorias-list.open {
+    max-height: 500px;
+}
+
 .subcategoria-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     background-color: #FFF5EB;
-    color: #172B68;
+    color: #AEB1C2;
     font-weight: bold;
     margin-bottom: 10px;
+    padding: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+.subcategoria-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s cubic-bezier(0.4,0,0.4,0.4);
+    background: #fff; /* Optional: style as needed */
+    padding: 0 10px;
+}
+.subcategoria-content.open {
+    max-height: 300px; /* Adjust as needed */
+    transition: max-height 0.4s cubic-bezier(0.4,0,0.4,0.4);
 }
