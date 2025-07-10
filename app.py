@@ -19,9 +19,9 @@ class Subcategoria(db.Model):
     descricao = db.Column(db.String(500), nullable=True)
     categoria_id = db.Column(db.Integer, db.ForeignKey('categoria.id'), nullable=False)
 
-# with app.app_context():
-#     db.drop_all()
-#     db.create_all()
+with app.app_context():
+    db.drop_all()
+    db.create_all()
 
 insert_categorias = [
     Categoria(nome='Aperfeiçoamento e Enriquencimento Cultural e Esportivo', maxima_semestre=80),

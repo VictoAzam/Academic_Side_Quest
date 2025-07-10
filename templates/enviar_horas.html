@@ -36,31 +36,37 @@
                                 <h2 class="title">{{ categoria.nome }}</h2>
                                 <h2 class="hora">Máxima na categoria por semestre: {{ categoria.maxima_semestre }}h </h2>
                             </div>
-                            <div class="subcategorias-list">
+                            <!-- remova o open depois, so ta aqui pra teste -->
+                            <div class="subcategorias-list open">
                                 {% for subcategoria in categoria.subcategorias %}
-                                    <div class="subcategoria-title" onclick="toggleSubcategoriaContent(this)">
-                                        <h2>{{ subcategoria.nome }}</h2>
-                                        <h2>Horas máximas nessa subcategoria: {{ subcategoria.maxima_sub }}h</h2>
-                                    </div>
-                                    <div class="subcategoria-content">
-                                        <p>{{ subcategoria.descricao }}</p>
+                                <div class="subcategoria-title" onclick="toggleSubcategoriaContent(this)">
+                                    <h2>{{ subcategoria.nome }}</h2>
+                                    <h2>Horas máximas nessa subcategoria: {{ subcategoria.maxima_sub }}h</h2>
+                                </div>
+                                <!-- remova o open depois, so ta aqui pra teste -->
+                                    <div class="subcategoria-content open">
                                         <form method="post" enctype="multipart/form-data">
-                                            <label>
+                                            <div class="sub-content-left">
+                                                <p>{{ subcategoria.descricao }}</p>
+                                                <label for="horas">
                                                 Número de horas:
-                                                <input type="number" name="horas" min="0" required>
                                             </label>
-                                            <br>
-                                            <label>
+                                            <input type="number" name="horas" min="0" required>
+
+                                            <label for="observacao">
                                                 Descrição/Observação:
-                                                <input type="text" name="observacao" required>
                                             </label>
-                                            <br>
-                                            <label>
-                                                Comprovante:
+                                            <input type="text" name="observacao" required>
+                                            </div>
+                                            
+                                            <div class="sub-content-right">
+                                                <label for="comprovante">
+                                                    Comprovante:
+                                                </label>
                                                 <input type="file" name="comprovante" required>
-                                            </label>
-                                            <br>
-                                            <button type="submit">Enviar</button>
+                                            
+                                                <button type="submit">Enviar</button>
+                                            </div>
                                         </form>
                                     </div>
                                 {% endfor %}
