@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Tomorrow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Tomorrow', sans-serif;
+}
+
+.container {
+    background-color: #FFF5EB;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    position: relative;
+}
+
+/* =============== HEADER STYLES =============== */
+header {
+    background-color: #F29334;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    box-shadow: 0px 2px 2px darkgray;
+    padding: 5px;
+    position: fixed;
+    z-index: 1000;
+}
+
+header .prof-pic {
+    width: 50px;
+    margin-left: 5px;
+}
+
+header .prof-pic a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .user-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.logo .logo-img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+/* =============== MAIN CONTENT STYLES =============== */
+.main-card {
+    background-color: white;
+    width: 900px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px darkgray;
+    margin-top: 120px; /* Espaço para o header fixo */
+    overflow: hidden;
+}
+
+.main-title {
+    color: #172B68;
+    background-color: #FFB44E;
+    overflow: hidden;
+    padding-left: 15px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+    color: #172B68;
+}
+
+/* =============== EXEMPLO DE CONTEÚDO =============== */
+.example-content {
+    background-color: #FFF5EB;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.example-content h2 {
+    color: #F29334;
+    margin-bottom: 10px;
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media (max-width: 700px) {
+    .main-card {
+        width: 95%;
+        margin: 100px 10px 20px 10px;
+    }
+    
+    header {
+        padding: 10px 5px;
+    }
+    
+    .logo .logo-img {
+        width: 80px;
+        margin-right: 5px;
+    }
+    
+    header .prof-pic {
+        width: 40px;
+    }
+    
+    .user-text {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-card {
+        width: 100%;
+        margin: 80px 5px 20px 5px;
+        border-radius: 5px;
+    }
+    
+    .main-content {
+        padding: 15px;
+    }
+    
+    .logo .logo-img {
+        width: 60px;
+    }
+    
+    header .prof-pic {
+        width: 35px;
+    }
+    
+    .user-text {
+        font-size: 0.8em;
+    }
+}
